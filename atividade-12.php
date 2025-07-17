@@ -9,7 +9,7 @@
     <form method="POST" action="">
         <label for="palavra">escreva uma palavra para verificar quantas vogais estão presentes: </label>
         <input type="text" id="palavra" name="palavra">
-        <button id="verificar_vogal" name="verificar_vogal">Verificar</button>
+        <button type="submit" id="verificar_vogal" name="verificar_vogal">Verificar</button>
     </form>
 
 
@@ -19,10 +19,15 @@
             if(isset($_POST['verificar_vogal'])){
 
                 $palavra = $_POST['palavra'];
-                $vogais = "aeiouAEIOU";
+                $vogais = array("a","e","i","o","u","A","E","I","O","U");
                 $contador = null;
 
-                for($i = )
+                for($i = 0; $i < strlen($palavra); $i++){
+                    if(in_array($palavra[$i], $vogais)){
+                        $contador++;
+                    }
+                }
+                echo "há $contador vogais na palavra $palavra";
             }
         }
 

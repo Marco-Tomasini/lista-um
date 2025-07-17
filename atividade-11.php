@@ -9,7 +9,7 @@
     <form method="POST" action="">
         <label for="palavra">escreva uma palavra para verificar: </label>
         <input type="text" id="palavra" name="palavra">
-        <button id="palavra_verificar" name="palavra_verificar">Verificar</button>
+        <button type="submit" id="palavra_verificar" name="palavra_verificar">Verificar</button>
     </form>
 
 
